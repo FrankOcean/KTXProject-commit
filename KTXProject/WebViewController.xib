@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController">
+            <connections>
+                <outlet property="WBView" destination="CF5-cQ-CHk" id="VgZ-26-Ohv"/>
+                <outlet property="dismissBtn" destination="z9d-yz-1E7" id="alU-kX-gHT"/>
+                <outlet property="shareBtn" destination="OuV-yi-FfU" id="gPt-Sl-5YM"/>
+                <outlet property="storeBtn" destination="J5G-9k-y8K" id="IAF-dF-obz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CF5-cQ-CHk">
+                    <rect key="frame" x="0.0" y="20" width="414" height="856"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-eP-kCd">
+                    <rect key="frame" x="0.0" y="20" width="414" height="66"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9d-yz-1E7">
+                            <rect key="frame" x="20" y="19" width="32" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="68k-mH-bGd"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="Ye2-Wv-bQi"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="l94-9K-6FH"/>
+                                <constraint firstAttribute="width" constant="32" id="yG4-bi-HhI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="返回"/>
+                            <connections>
+                                <action selector="dismissBtnClick:" destination="-1" eventType="touchUpInside" id="981-ry-xuz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuV-yi-FfU">
+                            <rect key="frame" x="172" y="19" width="32" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="A1X-iP-Sqe"/>
+                                <constraint firstAttribute="height" constant="28" id="SvP-cV-hwl"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Dark_News_Share.png"/>
+                            <connections>
+                                <action selector="shareBtnClick:" destination="-1" eventType="touchUpInside" id="G6u-e0-ekp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5G-9k-y8K">
+                            <rect key="frame" x="351" y="19" width="32" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="Fou-IU-FZU"/>
+                                <constraint firstAttribute="height" constant="28" id="ZUt-vE-0Ye"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Dark_News_Fav.png"/>
+                            <state key="selected" backgroundImage="Dark_Menu_Icon_Collect.png"/>
+                            <connections>
+                                <action selector="shareBtnClick:" destination="-1" eventType="touchUpInside" id="vym-3G-Yxb"/>
+                                <action selector="storeBtnClick:" destination="-1" eventType="touchUpInside" id="Rt6-Ok-0tU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df8-vI-yj8">
+                            <rect key="frame" x="245" y="10" width="62" height="45"/>
+                            <state key="normal" image="News_Navigation_Comment.png" backgroundImage="News_Navigation_Comment_Highlight.png"/>
+                            <connections>
+                                <action selector="commentBtnClick:" destination="-1" eventType="touchUpInside" id="0Rd-Dw-XSP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="J5G-9k-y8K" firstAttribute="top" secondItem="tK5-eP-kCd" secondAttribute="top" constant="19" id="5wH-fr-oKp"/>
+                        <constraint firstItem="z9d-yz-1E7" firstAttribute="top" secondItem="tK5-eP-kCd" secondAttribute="top" constant="19" id="8FV-7F-f4G"/>
+                        <constraint firstItem="z9d-yz-1E7" firstAttribute="leading" secondItem="tK5-eP-kCd" secondAttribute="leading" constant="20" id="8YR-Z4-qm0"/>
+                        <constraint firstAttribute="trailing" secondItem="J5G-9k-y8K" secondAttribute="trailing" constant="31" id="IQh-kB-3yp"/>
+                        <constraint firstAttribute="height" constant="66" id="Pfv-I1-OGC"/>
+                        <constraint firstItem="OuV-yi-FfU" firstAttribute="leading" secondItem="z9d-yz-1E7" secondAttribute="trailing" constant="120" id="gxk-xJ-Uwq"/>
+                        <constraint firstItem="OuV-yi-FfU" firstAttribute="top" secondItem="tK5-eP-kCd" secondAttribute="top" constant="19" id="kre-11-y43"/>
+                        <constraint firstItem="z9d-yz-1E7" firstAttribute="top" secondItem="tK5-eP-kCd" secondAttribute="top" constant="19" id="nz4-g5-T5m"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CF5-cQ-CHk" secondAttribute="bottom" constant="-140" id="3I8-z7-NIk"/>
+                <constraint firstAttribute="trailing" secondItem="CF5-cQ-CHk" secondAttribute="trailing" id="EXJ-wl-3Z1"/>
+                <constraint firstItem="tK5-eP-kCd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FZl-aU-W6w"/>
+                <constraint firstItem="tK5-eP-kCd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="QJt-6w-Xr9"/>
+                <constraint firstItem="CF5-cQ-CHk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hJh-ip-lJZ"/>
+                <constraint firstItem="CF5-cQ-CHk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="jSV-2E-8Hv"/>
+                <constraint firstAttribute="trailing" secondItem="tK5-eP-kCd" secondAttribute="trailing" id="vzl-cE-FsN"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="361" y="249"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Dark_Menu_Icon_Collect.png" width="40" height="40"/>
+        <image name="Dark_News_Fav.png" width="36" height="32"/>
+        <image name="Dark_News_Share.png" width="36" height="32"/>
+        <image name="News_Navigation_Comment.png" width="192" height="129"/>
+        <image name="News_Navigation_Comment_Highlight.png" width="128" height="86"/>
+    </resources>
+</document>
